@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="NyamNyamProject.Components.IngredientsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NyamNyamProject.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="300">
+    <Grid Height="80" Width="300">
+        <StackPanel  HorizontalAlignment="Left" >
+            <Label Name="Name" FontWeight="Black" Content="{Binding ingredient_name}"></Label>
+            <StackPanel Orientation="Horizontal">
+                <Label>Price:</Label>
+                <Label Name="PriceLb" Content="{Binding ingredient_cost_per_unit}"></Label>
+            </StackPanel>
+            <Button Name="DishesBtn" Background="{x:Null}" BorderBrush="Transparent" Foreground="Blue" HorizontalAlignment="Left"  Click="DishesBtn_Click" >
+                <TextBlock  Foreground="Red" TextDecorations="Underline"  >
+                    Delete
+                </TextBlock>
+            </Button>
+        </StackPanel>
+        <StackPanel  HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 10 0">
+            <TextBox Width="40" Height="30" Name="TotalAmountTb" VerticalAlignment="Center" Text="{Binding ingredient_instock_count}" PreviewTextInput="TotalAmountTb_PreviewTextInput" TextAlignment="Center" VerticalContentAlignment="Center"  TextChanged="TextBox_TextChanged" >
+
+            </TextBox>
+
+            <Label Name="UnitLb" VerticalAlignment="Center" Margin="-3 0 0 0" Content="{Binding MainUnits.unit_name}"></Label>
+            <StackPanel VerticalAlignment="Center">
+                <Button Name="PlusBtn" Width="20" Click="PlusBtn_Click" >+</Button>
+                <Button Name="MinusBtn" Margin="0 10 0 0" Click="MinusBtn_Click" >-</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

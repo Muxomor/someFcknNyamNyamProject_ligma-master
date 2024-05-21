@@ -1,0 +1,29 @@
+﻿<Window x:Class="NyamNyamProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NyamNyamProject"
+        mc:Ignorable="d"
+        Title="NyamNyamApplication" ResizeMode="NoResize" Height="510" Width="820">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Left" Width="150"   >
+                <Button Name="DishesBtn" Background="{x:Null}" BorderBrush="Transparent" Foreground="Blue" Click="DishesBtn_Click"   >
+                    <TextBlock TextDecorations="Underline">Dishes</TextBlock>
+                </Button>
+                <Button Name="IngredientsBtn"  Background="{x:Null}" BorderBrush="Transparent" Foreground="Blue" Click="IngredientsBtn_Click" >
+                    <TextBlock TextDecorations="Underline">Ingredients</TextBlock>
+                </Button>
+                <Button  Name="OrdersBtn"  Background="{x:Null}" BorderBrush="Transparent" Foreground="Blue" Click="OrdersBtn_Click"  >
+                    <TextBlock TextDecorations="Underline">Orders</TextBlock>
+                </Button>
+                <Button  Name="RecipesBtn"  Background="{x:Null}" BorderBrush="Transparent" Foreground="Blue" Click="RecipesBtn_Click"  >
+                    <TextBlock TextDecorations="Underline">Recipes</TextBlock>
+                </Button>
+
+            </StackPanel>
+            <Frame NavigationUIVisibility="Hidden" Name="MainPageFrame" Width="650" BorderBrush="Black"  BorderThickness="1" Margin="0 5 0 5"></Frame>
+        </StackPanel>
+    </Grid>
+</Window>
