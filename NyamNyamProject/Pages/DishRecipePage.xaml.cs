@@ -33,7 +33,7 @@ namespace NyamNyamProject.Pages
             int time = 0;
             TotalServingsCount = (int)dish.base_servings_count;
             StringBuilder recipe = new StringBuilder();
-            int i=1;
+            int i = 1;
             foreach (var item in stages)
             {
                 recipe.AppendFormat("{0}. {1}\n", i, item.process_pescription);
@@ -60,7 +60,7 @@ namespace NyamNyamProject.Pages
             ShortdescriptionTb.Text = dish.dish_description;
 
             ServingTb.Text = TotalServingsCount.ToString();
-            ShortdescriptionTb.MaxHeight=52;
+            ShortdescriptionTb.MaxHeight = 52;
             NameLb.Content = $"'{dish.dish_name}'";
             TotalCostLB.Content = dish.dish_final_price_for_client.ToString();
         }
@@ -92,17 +92,16 @@ namespace NyamNyamProject.Pages
                 }
                 TotalCostLB.Content = dish.dish_final_price_for_client * (Convert.ToInt32(ServingTb.Text) / dish.base_servings_count);
 
-                    foreach (var item in ingredientsOfStage)
-                    {
-                        item.ingredient_qnt /= coef;
-                        item.Ingredients.ingredient_cost_per_unit /= coef;
-                    }
-                    Refresh();
-                
+                foreach (var item in ingredientsOfStage)
+                {
+                    item.ingredient_qnt = item.ingredient_qnt / coef;
+                    item.Ingredients.ingredient_cost_per_unit = item.Ingredients.ingredient_cost_per_unit / coef;
+                }
+                Refresh();
             }
             else
             {
-                
+                MessageBox.Show("Error! Fuck you!");
             }
         }
 
@@ -114,11 +113,11 @@ namespace NyamNyamProject.Pages
             TotalCostLB.Content = dish.dish_final_price_for_client * (Convert.ToInt32(ServingTb.Text) / dish.base_servings_count);
             foreach (var item in ingredientsOfStage)
             {
-                item.ingredient_qnt *= coef;
-                item.Ingredients.ingredient_cost_per_unit *= coef;
+                item.ingredient_qnt = item.ingredient_qnt * coef;
+                item.Ingredients.ingredient_cost_per_unit = item.Ingredients.ingredient_cost_per_unit * coef;
             }
             Refresh();
         }
-        
+
     }
 }

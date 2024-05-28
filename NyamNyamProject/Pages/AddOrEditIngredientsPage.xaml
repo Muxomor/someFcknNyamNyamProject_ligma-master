@@ -15,7 +15,7 @@
                 <TextBox x:Name="NameTb" Text="{Binding ingredient_name}" Width="250" Margin="10" MaxLength="30"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="10 10 0 0" Width="110">Price:</TextBlock>
+                <TextBlock Margin="10 10 0 0" Width="110">Price(in $):</TextBlock>
                 <TextBox x:Name="PriceTb" Text="{Binding ingredient_cost_per_unit}" PreviewTextInput="PriceTb_PreviewTextInput" MaxLength="8"  Width="250" Margin="10"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">

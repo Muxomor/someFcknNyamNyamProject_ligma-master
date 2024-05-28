@@ -19,7 +19,7 @@
                     <TextBlock TextDecorations="Underline">Orders</TextBlock>
                 </Button>
                 <Button  Name="RecipesBtn"  Background="{x:Null}" BorderBrush="Transparent" Foreground="Blue" Click="RecipesBtn_Click"  >
-                    <TextBlock TextDecorations="Underline">Recipes</TextBlock>
+                    <TextBlock TextDecorations="Underline">New recipe</TextBlock>
                 </Button>
 
             </StackPanel>

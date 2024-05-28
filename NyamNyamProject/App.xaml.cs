@@ -17,8 +17,5 @@ namespace NyamNyamProject
     {
         public static Frame MainPageFrame;
         public static NyamNyamHotspotEntities db = new NyamNyamHotspotEntities();
-        //public static NyamNyam1215ServEntities db = new NyamNyam1215ServEntities();
-        //public static NyamNyamEntities db = new NyamNyamEntities();
-        //public static AdelEntities db = new AdelEntities();
     }
 }

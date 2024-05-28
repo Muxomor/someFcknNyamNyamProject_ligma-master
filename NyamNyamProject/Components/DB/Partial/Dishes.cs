@@ -45,34 +45,5 @@ namespace NyamNyamProject.Components.DB
             return answer;
 
         }
-        //public bool Availability
-        //{
-        //    get
-        //    {
-        //        var allIngredients = this.StageOfCooking.SelectMany(x => x.StageIngredient);
-        //        if (allIngredients.Any())
-        //        {
-        //            foreach (var ingredient in allIngredients)
-        //            {
-        //                if (allIngredients.Where(x => x.ingredient_id == ingredient.ingredient_id).Sum(x => x.ingredient_qnt) > ingredient.Ingredients.ingredient_instock_count)
-        //                {
-        //                    Availability = false;
-        //                    //App.db.SaveChanges();
-        //                }
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Availability = true;
-        //            //App.db.SaveChanges();
-        //        }
-
-        //        return Availability;
-        //    }
-        //    set
-        //    {
-
-        //    }
-        //}
     }
 }

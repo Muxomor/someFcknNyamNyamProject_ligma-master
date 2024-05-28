@@ -28,7 +28,7 @@ namespace NyamNyamProject.Pages
     {
         Dishes dish = new Dishes();
         List<StageOfCooking> stagesOfCooking = new List<StageOfCooking>();
-        public NewRecipePage()
+        public NewRecipePage()  
         {
             InitializeComponent();
             categoryCB.ItemsSource = App.db.Category.ToList();
