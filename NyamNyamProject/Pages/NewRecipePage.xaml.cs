@@ -69,6 +69,7 @@ namespace NyamNyamProject.Pages
                 //dish.StageOfCooking.Add(stagesOfCooking);
                 App.db.Dishes.Add(dish);
                 App.db.SaveChanges();
+                App.MainPageFrame.Navigate(new DishesListPage());
             }
 
 
@@ -80,7 +81,7 @@ namespace NyamNyamProject.Pages
             if (CheckFiels())
             {
                 AddRecipeStageWindow window = new AddRecipeStageWindow(dish, out StageOfCooking stageOfCooking);
-                window.Show();
+                window.ShowDialog();
                 if (stageOfCooking != null)
                 {
                     stagesOfCooking.Add(stageOfCooking);
@@ -97,6 +98,7 @@ namespace NyamNyamProject.Pages
             {
                 MessageBox.Show("Fill all required fields");
             }
+            Refresh();
         }
         private bool CheckFiels()
         {
